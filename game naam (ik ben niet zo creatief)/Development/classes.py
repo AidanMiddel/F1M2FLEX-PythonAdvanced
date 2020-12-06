@@ -3,17 +3,19 @@ class Mario :
     _lives = 3
     _speed = 30.0
 
-    def Test(self):
-        print("Hallo")
-        print("Speed is: ", self._speed)
+    def __init__(self, snelheid):
+        self.snelheid = snelheid
+
+    def mariosnelheid(snel):
+        print("Mario's speed is: " , snel.snelheid)
 
 
-instanceMario = Mario()
-nogEenMario = Mario()
 
-print( instanceMario._lives )
-instanceMario.Test()
+instanceMario = Mario(30)
+instanceMario.mariosnelheid()
+
+print( "mario has" , instanceMario._lives , "lives")
 instanceMario._speed = 50.5
 
 print("instanceMario snelheid:", instanceMario._speed)
-print("nogEenMario snelheid:", nogEenMario._speed)
+
