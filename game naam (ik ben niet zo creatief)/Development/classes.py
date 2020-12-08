@@ -1,21 +1,32 @@
-class Mario :
+class Plane :
 
-    _lives = 3
+    _lives = 1
     _speed = 30.0
+    _bomber = True
+    _ammunition = 5
 
-    def __init__(self, snelheid):
+    def __init__(self, levens, snelheid, bommer, munitie):
+        self.levens = levens
         self.snelheid = snelheid
+        self.bommer = bommer
+        self.munitie = munitie
 
-    def mariosnelheid(snel):
-        print("Mario's speed is: " , snel.snelheid)
+    def planelives(leef):
+        print("Plane's lives is: " , leef.planelives)
+    
+    def planespeed(snel):
+        print("Plane's speed is: " , snel.planespeed)
+
+    def planebommer(bom):
+        print("Plane has bommer: ", bom.planebommer)
+
+    def planeammunition(kogels):
+        print("Plane has" , kogels.planeammunition , "boms in storage")
 
 
-
-instanceMario = Mario(30)
-instanceMario.mariosnelheid()
-
-print( "mario has" , instanceMario._lives , "lives")
-instanceMario._speed = 50.5
-
-print("instanceMario snelheid:", instanceMario._speed)
+littleplane = Plane(1, 30, True, 5)
+littleplane.planelives()
+littleplane.planespeed()
+littleplane.planebommer()
+littleplane.planeammunition()
 
