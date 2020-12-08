@@ -2,7 +2,7 @@ class Plane :
 
     _lives = 1
     _speed = 30.0
-    _bomber = True
+    _bomber = 1
     _ammunition = 5
 
     def __init__(self, levens, snelheid, bommer, munitie):
@@ -24,7 +24,7 @@ class Plane :
         print("Plane has" , kogels.planeammunition , "boms in storage")
 
 
-littleplane = Plane(1, 30, True, 5)
+littleplane = Plane(1, 30, 1, 5)
 littleplane.planelives()
 littleplane.planespeed()
 littleplane.planebommer()
